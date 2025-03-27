@@ -1,0 +1,26 @@
+{
+  "name": "openapi-validation",
+  "version": "1.0.0",
+  "description": "Validate your openapi specification with your API",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hallborg/Openapi-validation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hallborg/Openapi-validation/issues"
+  },
+  "homepage": "https://github.com/Hallborg/Openapi-validation#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.9"
+  }
+}
