@@ -61,13 +61,19 @@ describe("openapi specification ", () => {
             },
           },
         },
-      })
+      }),
+      "localhost:8000",
     );
-    expect(result).toStrictEqual(
-      new TestSuite({
-        openapi: "3.0.0",
-        paths: ["/hello", "/goodbye"],
-      })
-    );
+    expect(result).toEqual({
+      endpoint: "localhost:8000",
+      tests: [
+        {
+          url: "/hello",
+        },
+        {
+          url: "/goodbye",
+        },
+      ],
+    });
   });
 });

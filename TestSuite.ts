@@ -1,15 +1,22 @@
-export interface TestSuiteParams {
-  openapi: string;
-  paths: string[];
+class Test {
+  url: string;
+
+  constructor(url: string) {
+    this.url = url;
+  }
 }
 
+export interface TestSuiteParams {
+  paths: string[];
+  endpoint: string;
+}
 
 export class TestSuite {
-  openapi: string;
-  paths: string[];
+  tests: Test[];
+  endpoint: string;
 
   constructor(params: TestSuiteParams) {
-    this.openapi = params.openapi;
-    this.paths = params.paths;
+    this.tests = params.paths.map((path) => new Test(path));
+    this.endpoint = params.endpoint;
   }
 }
