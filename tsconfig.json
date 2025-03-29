@@ -8,6 +8,11 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "resolveJsonModule": true,
+    "types": ["vitest/globals"],
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "test/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "test/**/*.ts"
+  ]
 }

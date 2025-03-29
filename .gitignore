@@ -27,5 +27,7 @@ coverage/
 # Windows
 Thumbs.db
 
-# Jet
+# Webstorm
+
+.idea
 

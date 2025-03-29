@@ -1,12 +1,8 @@
-import { describe, test, expect } from "vitest";
-import { Service } from "./../Service";
-import { OpenapiSpecification } from "../OpenapiSpecification";
+import { Service } from "../Service";
+import { TestSuite } from "../TestSuite";
 
 describe("openapi specification ", () => {
   test("that the json is valid", () => {
-    const input = {
-      input: "from client",
-    };
     const result = Service.parse(
       JSON.stringify({
         openapi: "3.0.0",
@@ -68,7 +64,7 @@ describe("openapi specification ", () => {
       })
     );
     expect(result).toStrictEqual(
-      new OpenapiSpecification({
+      new TestSuite({
         openapi: "3.0.0",
         paths: ["/hello", "/goodbye"],
       })

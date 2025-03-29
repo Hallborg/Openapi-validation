@@ -1,14 +1,14 @@
-export interface OpenapiSpecificationParams {
+export interface TestSuiteParams {
   openapi: string;
   paths: string[];
 }
 
 
-export class OpenapiSpecification {
+export class TestSuite {
   openapi: string;
   paths: string[];
 
-  constructor(params: OpenapiSpecificationParams) {
+  constructor(params: TestSuiteParams) {
     this.openapi = params.openapi;
     this.paths = params.paths;
   }
