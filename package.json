@@ -29,5 +29,8 @@
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0",
     "vitest": "^3.0.9"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
   }
 }
