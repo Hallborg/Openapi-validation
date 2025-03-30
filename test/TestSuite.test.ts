@@ -69,9 +69,13 @@ describe("openapi specification ", () => {
       tests: [
         {
           url: "/hello",
+          statusCode: 200,
+          message: "Hello, world!",
         },
         {
           url: "/goodbye",
+          statusCode: 200,
+          message: "Goodbye, world!",
         },
       ],
     });

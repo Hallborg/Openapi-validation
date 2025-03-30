@@ -1,13 +1,17 @@
-class Test {
+export class Test {
   url: string;
+  message: string;
+  statusCode: number;
 
-  constructor(url: string) {
+  constructor(url: string, message: string, statusCode: number) {
     this.url = url;
+    this.message = message;
+    this.statusCode = statusCode;
   }
 }
 
 export interface TestSuiteParams {
-  paths: string[];
+  testCases: Test[];
   endpoint: string;
 }
 
@@ -16,7 +20,7 @@ export class TestSuite {
   endpoint: string;
 
   constructor(params: TestSuiteParams) {
-    this.tests = params.paths.map((path) => new Test(path));
+    this.tests = params.testCases;
     this.endpoint = params.endpoint;
   }
 }
